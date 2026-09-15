@@ -1,6 +1,7 @@
 name: site-check
 on:
-  push: [main]
+  push: 
+   branches: [main]
 jobs:
   verify:
     runs-on: ubuntu-latest
