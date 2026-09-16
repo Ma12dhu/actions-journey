@@ -5,5 +5,5 @@ jobs:
    runs-on: ubuntu-latest
    steps: 
      - name: show the target region
-       run: echo "Deploying to ${{var.DEPLOY_REGION}}"
+       run: echo "Deploying to ${{vars.DEPLOY_REGION}}"
 
