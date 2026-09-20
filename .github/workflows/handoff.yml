@@ -21,7 +21,7 @@ jobs:
        with: 
         name: app-package
      - name: check it arrived
-       run: test -f app.txt
+       run: test -f app.txt && cat app.txt
 
 
 
