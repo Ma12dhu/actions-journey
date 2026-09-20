@@ -10,5 +10,6 @@ jobs:
        uses: actions/upload-artifact@v4
        with:
          name: build-report
-         path: report.txt     
+         path: report.txt    
+         retention-days: 5 
 
