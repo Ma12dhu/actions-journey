@@ -1,14 +1,17 @@
-name: dep_cache
+name: deps
 on: push
-jobs: 
- python_cache:
-   runs-on: ubuntu-latest
-   steps:
-     - name: cache_pip
-       uses: actions/cache@v4
-       with: 
-         path: ~/.cache/pip
-         key: pip-${{hashFiles('requirements.txt')}}
-         restore-keys: |
-           pip-
-
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+      - name: Cache pip downloads
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            pip-
+      - name: Install dependencies
+        run: python3 -m pip install --user -r requirements.txt
