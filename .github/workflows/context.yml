@@ -1,4 +1,4 @@
-name: context
+name: context_task
 on: push
 jobs:
   describe:
