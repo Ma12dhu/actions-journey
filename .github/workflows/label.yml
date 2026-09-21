@@ -1,4 +1,4 @@
-name: Label
+name: Build_label
 on: push
 jobs: 
  build:
